@@ -46,7 +46,7 @@
     "vite": "^7.3.6",
     "yalc": "^1.0.0-pre.53",
     "@medusajs/eslint-plugin": "2.22.1",
-    "eslint": "^9.39.4",
+    "eslint": "^10.13.0",
     "jiti": "^2.7.0",
     "prettier": "^3.2.5"
   },
