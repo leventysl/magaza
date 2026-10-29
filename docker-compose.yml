@@ -1,0 +1,19 @@
+# Yerel geliştirme veritabanı. Şifre yalnızca bu bilgisayardaki geliştirme içindir.
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: medusa
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-medusa}
+      POSTGRES_DB: medusa_magaza
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U medusa -d medusa_magaza"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  postgres-data:

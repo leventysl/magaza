@@ -1,0 +1,43 @@
+# Sunucu (Medusa): lint, tip, birim ve HTTP entegrasyon testleri, bagimlilik denetimi.
+name: ci-sunucu
+on:
+  push:
+    paths: ["apps/backend/**", "scripts/**", ".github/workflows/ci-sunucu.yml"]
+  pull_request:
+    paths: ["apps/backend/**", "scripts/**", ".github/workflows/ci-sunucu.yml"]
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: apps/backend
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: medusa
+          POSTGRES_PASSWORD: medusa
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U medusa"
+          --health-interval 5s
+          --health-retries 10
+    env:
+      DB_HOST: localhost
+      DB_USERNAME: medusa
+      DB_PASSWORD: medusa
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: npm
+          cache-dependency-path: apps/backend/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:unit
+      - run: npm run test:integration:http
+      - run: node ../../scripts/denetim.mjs

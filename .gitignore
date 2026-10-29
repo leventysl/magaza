@@ -1,0 +1,8 @@
+# Uygulamaların kendi .gitignore dosyaları ayrıntıyı kapsar; burası kök için.
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key

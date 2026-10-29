@@ -1,0 +1,19 @@
+# Gizli bilgi taramasi (gitleaks). Kisisel hesap repolarinda lisans anahtari gerekmez.
+name: guvenlik
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 4 * * 1"
+permissions:
+  contents: read
+jobs:
+  gizli-bilgi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
