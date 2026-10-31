@@ -1,18 +1,39 @@
 # Haftalık bağımlılık güncellemeleri: GitHub Actions + her uygulamanın npm paketleri.
+# Güvenlik güncellemeleri (Dependabot security updates) bu kurallardan bağımsız açılır.
 version: 2
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule: { interval: "weekly" }
+
   - package-ecosystem: "npm"
     directory: "/apps/mobile"
     schedule: { interval: "weekly" }
-    groups:
-      expo:
-        patterns: ["expo", "expo-*", "@expo/*", "react", "react-native", "react-native-*"]
+    ignore:
+      # Bu paketlerin sürümünü Expo SDK belirler; `npx expo install --fix` ile güncellenir
+      # (standartlar/expo.md). Tek tek yükseltmek SDK uyumunu bozar ve expo-doctor'ı kırar.
+      - dependency-name: "expo"
+      - dependency-name: "expo-*"
+      - dependency-name: "@expo/*"
+      - dependency-name: "jest-expo"
+      - dependency-name: "eslint-config-expo"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      - dependency-name: "react-native"
+      - dependency-name: "react-native-*"
+      - dependency-name: "@shopify/flash-list"
+      - dependency-name: "@types/react"
+      - dependency-name: "typescript"
+      # Ana sürüm atlamaları (ör. ESLint 10) bilinçli bir geçiş işi olarak elle yapılır.
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
   - package-ecosystem: "npm"
     directory: "/apps/backend"
     schedule: { interval: "weekly" }
     groups:
       medusa:
         patterns: ["@medusajs/*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
