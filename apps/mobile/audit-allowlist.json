@@ -1,7 +1,1 @@
-[
-  {
-    "id": "GHSA-mrhx-c7xc-m3w5",
-    "reason": "zod 3 yalnızca @expo/cli geliştirme aracında; uygulama paketine girmez ve dışarıdan veri doğrulamaz. Expo SDK 58'in son sürümünde düzeltme yok.",
-    "until": "2027-01-31"
-  }
-]
+[]

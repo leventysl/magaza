@@ -13,6 +13,10 @@ Biçim [Keep a Changelog](https://keepachangelog.com/tr-TR/1.1.0/), sürümler [
 - Örnek tencere kataloğu: 4 kategori, 9 ürün, 21 varyant (TRY, gerçekçi stok durumları).
 - Testler: mobil 42 (gerçek API yanıtıyla şema ve varyant mantığı, ekran testleri), sunucu 12.
 
+### Düzeltildi
+- Expo 58.0.22 / expo-router 58.0.29 yamaları; zod açığı (GHSA-mrhx-c7xc-m3w5) Expo tarafında
+  kapandığı için mobil denetim istisnası kaldırıldı.
+
 ### Kaldırıldı
 - Medusa'nın İngilizce kıyafet demo ürünleri ve 50 ürünlük demo betiği.
 
