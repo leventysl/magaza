@@ -3,7 +3,10 @@
 Ürün satışı, kampanyalar ve müşteri hesabı olan mobil e-ticaret uygulaması.
 iOS ve Android için tek kod tabanı (Expo); ürün, sipariş ve kampanyalar yönetim panelinden yönetilir (Medusa).
 
-> Durum: **v0.1.0 — kurulum aşaması.** Yol haritası: [docs/mimari.md](docs/mimari.md#yol-haritası).
+> Durum: **v0.2.0 — katalog.** Yol haritası: [docs/mimari.md](docs/mimari.md#yol-haritası).
+
+## Vitrin
+![Katalog ekranları](docs/vitrin/katalog-v0.2.0.png)
 
 ## Yapı
 ```
@@ -55,7 +58,10 @@ Her uygulamanın `.env.example` dosyası tüm adları ve açıklamaları içerir
 Mobil uygulamadaki `EXPO_PUBLIC_` değerleri uygulama paketine gömülür: oraya **hiçbir sır yazılmaz**.
 
 ## Bilinen eksikler
-- Ürün listesi, sepet, hesap ve ödeme ekranları henüz yok (yol haritası 1–4. aşamalar).
+- Sepet, hesap ve ödeme henüz yok (yol haritası 2–4. aşamalar); ürün detayında sepete ekleme 2. aşamada gelir.
+- Örnek ürünlerin görseli yok (yer tutucu gösterilir); gerçek fotoğraflar yönetim panelinden eklenir.
+- Görsel tasarım temel tema düzeyinde; marka yönü seçimi bekliyor.
+- Uygulama web'i hedeflemez (`expo-secure-store` web'de yoktur).
 - Yerel geliştirme Redis'siz çalışır (olay yolu bellekte); canlıda Redis gerekir.
 
 ## Lisans

@@ -8,7 +8,6 @@ Kurulum ve çalıştırma için kök [README](../../README.md)'ye bakın.
 | `npm run dev` | Sunucu + yönetim paneli (http://localhost:9000/app) |
 | `npx medusa db:migrate` | Tabloları kurar; ilk çalıştırmada Türkiye bölgesi ve örnek ürünleri yükler |
 | `npx medusa user -e <e-posta> -p <şifre>` | Yönetim paneli kullanıcısı oluşturur |
-| `npm run seed:demo` | Sayfalama denemek için 50 örnek ürün ekler (isteğe bağlı) |
 | `npm run check` | Lint + tip + birim testleri |
 | `npm run test:integration:http` | Geçici veritabanıyla HTTP testleri (PostgreSQL gerekir) |
 

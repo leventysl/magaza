@@ -1,0 +1,160 @@
+{
+  "products": [
+    {
+      "id": "prod_01M64Z1FYP74WAZ1M5NGAN0TQF",
+      "handle": "granit-tencere",
+      "title": "Granit Tencere",
+      "description": "Hafif, yapışmaz granit kaplama; cam kapaklı ve buhar delikli.",
+      "material": "Granit kaplama alüminyum",
+      "thumbnail": null,
+      "images": [],
+      "options": [
+        {
+          "id": "opt_01M64Z1FXWBB2XGZJ2MS5CM7ZD",
+          "title": "Renk"
+        },
+        {
+          "id": "opt_01M64Z1FXV9T0WNKPS57BADBZR",
+          "title": "Ölçü"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant_01M64Z1G2Q3E7N34JKX38AATQK",
+          "title": "18 cm / Siyah",
+          "manage_inventory": true,
+          "allow_backorder": false,
+          "inventory_quantity": 50,
+          "calculated_price": {
+            "calculated_amount": 649.9,
+            "original_amount": 649.9,
+            "currency_code": "try"
+          },
+          "options": [
+            {
+              "option_id": "opt_01M64Z1FXV9T0WNKPS57BADBZR",
+              "value": "18 cm"
+            },
+            {
+              "option_id": "opt_01M64Z1FXWBB2XGZJ2MS5CM7ZD",
+              "value": "Siyah"
+            }
+          ]
+        },
+        {
+          "id": "variant_01M64Z1G2QDRZKZWZCPC46WSVC",
+          "title": "18 cm / Bordo",
+          "manage_inventory": true,
+          "allow_backorder": false,
+          "inventory_quantity": 50,
+          "calculated_price": {
+            "calculated_amount": 649.9,
+            "original_amount": 649.9,
+            "currency_code": "try"
+          },
+          "options": [
+            {
+              "option_id": "opt_01M64Z1FXV9T0WNKPS57BADBZR",
+              "value": "18 cm"
+            },
+            {
+              "option_id": "opt_01M64Z1FXWBB2XGZJ2MS5CM7ZD",
+              "value": "Bordo"
+            }
+          ]
+        },
+        {
+          "id": "variant_01M64Z1G2QXBXAWM7HM41YWH3E",
+          "title": "20 cm / Siyah",
+          "manage_inventory": true,
+          "allow_backorder": false,
+          "inventory_quantity": 50,
+          "calculated_price": {
+            "calculated_amount": 749.9,
+            "original_amount": 749.9,
+            "currency_code": "try"
+          },
+          "options": [
+            {
+              "option_id": "opt_01M64Z1FXV9T0WNKPS57BADBZR",
+              "value": "20 cm"
+            },
+            {
+              "option_id": "opt_01M64Z1FXWBB2XGZJ2MS5CM7ZD",
+              "value": "Siyah"
+            }
+          ]
+        },
+        {
+          "id": "variant_01M64Z1G2R7RXXBC9BZ2P689WA",
+          "title": "20 cm / Bordo",
+          "manage_inventory": true,
+          "allow_backorder": false,
+          "inventory_quantity": 2,
+          "calculated_price": {
+            "calculated_amount": 749.9,
+            "original_amount": 749.9,
+            "currency_code": "try"
+          },
+          "options": [
+            {
+              "option_id": "opt_01M64Z1FXV9T0WNKPS57BADBZR",
+              "value": "20 cm"
+            },
+            {
+              "option_id": "opt_01M64Z1FXWBB2XGZJ2MS5CM7ZD",
+              "value": "Bordo"
+            }
+          ]
+        },
+        {
+          "id": "variant_01M64Z1G2RQ233BMBYHF5W1GWM",
+          "title": "24 cm / Siyah",
+          "manage_inventory": true,
+          "allow_backorder": false,
+          "inventory_quantity": 50,
+          "calculated_price": {
+            "calculated_amount": 899.9,
+            "original_amount": 899.9,
+            "currency_code": "try"
+          },
+          "options": [
+            {
+              "option_id": "opt_01M64Z1FXV9T0WNKPS57BADBZR",
+              "value": "24 cm"
+            },
+            {
+              "option_id": "opt_01M64Z1FXWBB2XGZJ2MS5CM7ZD",
+              "value": "Siyah"
+            }
+          ]
+        },
+        {
+          "id": "variant_01M64Z1G2RVB0HHKRJ6FSXSAHP",
+          "title": "24 cm / Bordo",
+          "manage_inventory": true,
+          "allow_backorder": false,
+          "inventory_quantity": 0,
+          "calculated_price": {
+            "calculated_amount": 899.9,
+            "original_amount": 899.9,
+            "currency_code": "try"
+          },
+          "options": [
+            {
+              "option_id": "opt_01M64Z1FXV9T0WNKPS57BADBZR",
+              "value": "24 cm"
+            },
+            {
+              "option_id": "opt_01M64Z1FXWBB2XGZJ2MS5CM7ZD",
+              "value": "Bordo"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "count": 1,
+  "offset": 0,
+  "limit": 1
+}

@@ -1,23 +1,37 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { router } from 'expo-router';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+
+import { MIN_TOUCH_SIZE, radius, spacing } from '@/constants/theme';
+import { CategoryChips } from '@/features/catalog/components/category-chips';
+import { ProductGrid } from '@/features/catalog/components/product-grid';
+import { useThemeColors } from '@/hooks/use-theme-colors';
 
 export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <Text accessibilityRole="header" style={styles.title}>
-        Mağaza
-      </Text>
+  const theme = useThemeColors();
+  const header = (
+    <View style={styles.header}>
+      <Pressable
+        onPress={() => router.push('/ara')}
+        accessibilityRole="search"
+        accessibilityLabel="Ürün ara"
+        style={[styles.search, { backgroundColor: theme.surface, borderColor: theme.border }]}
+      >
+        <Text style={[styles.searchText, { color: theme.muted }]}>🔍 Tencere, tava ara…</Text>
+      </Pressable>
+      <CategoryChips />
     </View>
   );
+  return <ProductGrid header={header} emptyTitle="Henüz ürün yok" />;
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
+  header: { gap: spacing.md, paddingHorizontal: spacing.xs, paddingTop: spacing.sm },
+  search: {
+    minHeight: MIN_TOUCH_SIZE,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    paddingHorizontal: spacing.lg,
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
+  searchText: { fontSize: 16 },
 });
