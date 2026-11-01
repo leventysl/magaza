@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { MIN_TOUCH_SIZE, radius, spacing } from '@/constants/theme';
+import { MIN_TOUCH_SIZE, radius, spacing, fonts } from '@/constants/theme';
 import { useThemeColors } from '@/hooks/use-theme-colors';
 
 import type { Product } from '../schemas';
@@ -60,7 +60,7 @@ export function OptionSelector({ product, option, selection, onSelect }: Props) 
 
 const styles = StyleSheet.create({
   container: { gap: spacing.sm },
-  title: { fontSize: 15, fontWeight: '600' },
+  title: { ...fonts.semibold, fontSize: 15 },
   values: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
   value: {
     minHeight: MIN_TOUCH_SIZE,
@@ -71,6 +71,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  valueText: { fontSize: 15, fontWeight: '500' },
+  valueText: { ...fonts.medium, fontSize: 15 },
   unavailable: { textDecorationLine: 'line-through' },
 });

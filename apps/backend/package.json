@@ -1,6 +1,6 @@
 {
   "name": "magaza-backend",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Mağaza e-ticaret sunucusu ve yönetim paneli (Medusa).",
   "scripts": {
     "build": "medusa build",

@@ -10,7 +10,7 @@ const bundleId = `com.leventysl.magaza${suffix}`;
 const config: ExpoConfig = {
   name: appName,
   slug: 'magaza',
-  version: '0.2.0',
+  version: '0.3.0',
   orientation: 'portrait',
   icon: './assets/images/icon.png',
   scheme: 'magaza',

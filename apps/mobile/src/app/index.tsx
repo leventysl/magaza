@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { MIN_TOUCH_SIZE, radius, spacing } from '@/constants/theme';
+import { MIN_TOUCH_SIZE, radius, spacing, fonts } from '@/constants/theme';
 import { CategoryChips } from '@/features/catalog/components/category-chips';
 import { ProductGrid } from '@/features/catalog/components/product-grid';
 import { useThemeColors } from '@/hooks/use-theme-colors';
@@ -33,5 +33,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.lg,
     justifyContent: 'center',
   },
-  searchText: { fontSize: 16 },
+  searchText: { ...fonts.regular, fontSize: 16 },
 });

@@ -2,6 +2,13 @@
 
 Biçim [Keep a Changelog](https://keepachangelog.com/tr-TR/1.1.0/), sürümler [SemVer](https://semver.org/lang/tr/).
 
+## [0.3.0] — 2026-10-31
+### Değişti
+- Görsel tasarım "Şef Minimal" yönüne geçti (Levent üç yön arasından seçti): siyah-beyaz renk
+  tokenları, keskin köşeler (4 px), Inter yazı ailesi (400/500/600/700). Tüm metin/zemin çiftleri
+  WCAG AA ölçüldü. Yazı tipleri yüklenene kadar açılış ekranı açık kalır; yüklenemezse sistem
+  yazı tipiyle devam edilir.
+
 ## [0.2.0] — 2026-10-31
 ### Eklendi
 - Katalog ekranları: ana sayfa (arama, kategoriler, iki sütunlu ürün ızgarası), kategori sayfası,

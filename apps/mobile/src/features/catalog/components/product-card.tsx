@@ -2,7 +2,7 @@ import { router } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { ProductImage } from '@/components/product-image';
-import { radius, spacing } from '@/constants/theme';
+import { radius, spacing, fonts } from '@/constants/theme';
 import { useThemeColors } from '@/hooks/use-theme-colors';
 
 import { formatPrice } from '../money';
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   image: { aspectRatio: 1 },
   body: { padding: spacing.md, gap: spacing.xs },
-  title: { fontSize: 15, fontWeight: '500' },
-  price: { fontSize: 15, fontWeight: '700' },
-  soldOut: { fontSize: 13, fontWeight: '600' },
+  title: { ...fonts.medium, fontSize: 15 },
+  price: { ...fonts.bold, fontSize: 15 },
+  soldOut: { ...fonts.semibold, fontSize: 13 },
 });

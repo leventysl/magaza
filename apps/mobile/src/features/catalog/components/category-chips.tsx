@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
 
-import { MIN_TOUCH_SIZE, radius, spacing } from '@/constants/theme';
+import { MIN_TOUCH_SIZE, radius, spacing, fonts } from '@/constants/theme';
 import { useThemeColors } from '@/hooks/use-theme-colors';
 
 import { useCategories } from '../hooks';
@@ -49,5 +49,5 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     justifyContent: 'center',
   },
-  label: { fontSize: 15, fontWeight: '500' },
+  label: { ...fonts.medium, fontSize: 15 },
 });

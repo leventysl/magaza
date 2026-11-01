@@ -1,5 +1,6 @@
 import { StyleSheet, Text } from 'react-native';
 
+import { fonts } from '@/constants/theme';
 import { useThemeColors } from '@/hooks/use-theme-colors';
 
 import type { StockStatus } from '../variants';
@@ -23,5 +24,5 @@ export function StockBadge({ status }: { status: StockStatus }) {
 }
 
 const styles = StyleSheet.create({
-  text: { fontSize: 14, fontWeight: '600' },
+  text: { ...fonts.semibold, fontSize: 14 },
 });

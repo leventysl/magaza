@@ -20,6 +20,7 @@
 | 2026-10-30 | İki uygulama ayrı `package-lock` ile, ortak çalışma alanı (workspace) yok | Expo ve Medusa'nın React/TypeScript sürümleri farklı; tek ağaçta çakışır |
 | 2026-10-30 | Bölge Türkiye, para birimi TRY | Hedef pazar; ödeme ve kargo bu bölgeye bağlanır |
 | 2026-10-31 | Seçenek değerleri ürünün varyantlarından türetilir | Medusa seçenek değerlerini ürünler arasında ortak tutar; doğrudan göstermek yanlış seçenek sunar |
+| 2026-10-31 | Tasarım yönü "Şef Minimal": siyah-beyaz, 4 px köşe, Inter | Levent üç yön arasından seçti; ürün fotoğrafları öne çıkar |
 | 2026-10-31 | Ürün sayfası kısa adla (`/urun/<handle>`) açılır | Okunur ve paylaşılabilir bağlantı; parametre zod ile doğrulanır |
 | 2026-10-30 | Yüksek açıklar `overrides` ile kapatılır, kapatılamayan istisna `audit-allowlist.json`'da süreli | Yeni açık CI'ı kırar; kabul edilen risk görünür kalır |
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 
 import { StateView } from '@/components/state-view';
-import { MIN_TOUCH_SIZE, radius, spacing } from '@/constants/theme';
+import { MIN_TOUCH_SIZE, radius, spacing, fonts } from '@/constants/theme';
 import { ProductGrid } from '@/features/catalog/components/product-grid';
 import { useDebouncedValue } from '@/hooks/use-debounced-value';
 import { useThemeColors } from '@/hooks/use-theme-colors';
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     borderWidth: 1,
     paddingHorizontal: spacing.lg,
+    ...fonts.regular,
     fontSize: 16,
   },
 });

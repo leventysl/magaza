@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FlatList, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
 import { ProductImage } from '@/components/product-image';
-import { spacing } from '@/constants/theme';
+import { spacing, fonts } from '@/constants/theme';
 import { useThemeColors } from '@/hooks/use-theme-colors';
 
 import { formatPrice } from '../money';
@@ -84,10 +84,10 @@ export function ProductDetail({ product }: { product: Product }) {
 const styles = StyleSheet.create({
   content: { paddingBottom: spacing.xl },
   body: { padding: spacing.lg, gap: spacing.lg },
-  title: { fontSize: 22, fontWeight: '700' },
+  title: { ...fonts.bold, fontSize: 22 },
   priceRow: { flexDirection: 'row', alignItems: 'baseline', gap: spacing.sm },
-  price: { fontSize: 22, fontWeight: '700' },
-  originalPrice: { fontSize: 16, textDecorationLine: 'line-through' },
-  description: { fontSize: 16, lineHeight: 23 },
-  meta: { fontSize: 14 },
+  price: { ...fonts.bold, fontSize: 22 },
+  originalPrice: { ...fonts.regular, fontSize: 16, textDecorationLine: 'line-through' },
+  description: { ...fonts.regular, fontSize: 16, lineHeight: 23 },
+  meta: { ...fonts.regular, fontSize: 14 },
 });

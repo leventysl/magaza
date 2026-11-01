@@ -1,6 +1,6 @@
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { MIN_TOUCH_SIZE, radius, spacing } from '@/constants/theme';
+import { MIN_TOUCH_SIZE, radius, spacing, fonts } from '@/constants/theme';
 import { useThemeColors } from '@/hooks/use-theme-colors';
 
 type Props =
@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
     padding: spacing.xl,
     gap: spacing.md,
   },
-  title: { fontSize: 18, fontWeight: '600', textAlign: 'center' },
-  description: { fontSize: 15, textAlign: 'center' },
+  title: { ...fonts.semibold, fontSize: 18, textAlign: 'center' },
+  description: { ...fonts.regular, fontSize: 15, textAlign: 'center' },
   button: {
     minHeight: MIN_TOUCH_SIZE,
     paddingHorizontal: spacing.xl,
     borderRadius: radius.pill,
     justifyContent: 'center',
   },
-  buttonText: { fontSize: 16, fontWeight: '600' },
+  buttonText: { ...fonts.semibold, fontSize: 16 },
 });
